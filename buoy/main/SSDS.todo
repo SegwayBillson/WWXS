@@ -1,0 +1,28 @@
+Overall:
+  ✔ Checking for first boot vs deep sleep wake @done (19-04-21 20:51)
+  ✔ Update status in NVS at all times @done (19-04-29 10:30)
+  ☐ Finalize state machine
+
+Timing:
+  ✔ Assume time is UTC @done (19-04-21 15:22)
+  ✔ Toggle day timer @done (19-04-29 10:30)
+  ☐ Night deep sleep timer
+  ☐ Day to night transition
+  ☐ Night to day transition
+  ✔ Checking hour of day @done (19-04-29 10:30)
+  ☐ Make sure we don't start collecting until we have a timestamp
+  ☐ Don't let the board collect while BLE is active - noticed after sending timestamp but before disconnect
+
+Bluetooth:
+  ✔ Add status request from app @done (19-04-29 10:30)
+    ✔ Read status from control characteristic? @done (19-04-18 12:54)
+  ✔ Gracefully handle data collection and system reset @done (19-04-29 10:30)
+  ☐ Handle bluetooth shutdown before deep sleep
+  ✔ Make sure connections can be started and stopped over and over @done (19-04-29 10:30)
+  ✔ Iterate over all datapoints in the sender @done (19-04-29 10:30)
+  ☐ Make sure the phone and board don't trip over each other when collecting data
+
+Storage:
+  ✔ Add status getter/setter @done (19-04-17 12:18)
+  ☐ Reset storage only when necessary
+  ☐ Reset storage on data collection completion
