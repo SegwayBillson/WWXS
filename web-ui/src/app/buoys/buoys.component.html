@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Buoy Name</th>
+      <th scope="col">Last Data Submitted</th>
+      <th scope="col">Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let buoy of buoys">
+      <td>{{buoy.name}}</td>
+      <td>{{buoy.lastRetrieval}}</td>
+      <td><span *ngIf="buoy.group">{{buoy.group.name}}</span></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Buoy</th>
+      <th scope="col">User</th>
+      <th scope="col">Timestamp</th>
+      <th scope="col">Surface Temprature</th>
+      <th scope="col">Surface Insolation</th>
+      <th scope="col">2' Salinity</th>
+      <th scope="col">2' Temprature</th>
+      <th scope="col">6' Temprature</th>
+      <th scope="col">6' Insolation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dp of data">
+      <td><span *ngIf="dp.buoy">{{dp.buoy.name}}</span></td>
+      <td><span *ngIf="dp.user">{{dp.user.username}}</span></td>
+      <td>{{dp.timestamp}}</td>
+      <td>{{dp.surfTemp}}</td>
+      <td>{{dp.surfInsolation}}</td>
+      <td>{{dp.shallowSalinity}}</td>
+      <td>{{dp.shallowTemp}}</td>
+      <td>{{dp.depthTemp}}</td>
+      <td>{{dp.depthTurbidity}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<line-graph></line-graph>

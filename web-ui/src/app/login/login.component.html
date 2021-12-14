@@ -1,0 +1,16 @@
+<div class="login-container">
+  <div class="login-body">
+      <h1>Sign In</h1>
+      <div class="error">
+          {{errorMessage}}
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-signin">
+          <label for="username" class="sr-only">Username:</label>
+          <input type="text" formControlName="username" class="form-control" placeholder="Username" required autofocus>
+          <label for="password" class="sr-only">Password:</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+          <button onclick="submit" class="btn btn-outline-success" type="submit">Log In</button>
+      </form>
+      <p class="register-link">Dont have an account? <a routerLink="/register">Register<i class="fas fa-external-link-alt"></i></a></p>
+  </div>
+</div>

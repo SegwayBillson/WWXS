@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="login-body">
+      <h1>Register User</h1>
+      <p>You can register a business once you have made a user account.</p>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-signin">
+          <!-- email -->
+          <label for="email" class="sr-only">E-Mail:</label>
+          <input name="email" type="text" formControlName="email" class="form-control" placeholder="E-Mail" required autofocus>
+          <!-- username -->
+          <label for="username" class="sr-only">Username:</label>
+          <input name="username" type="text" formControlName="username" class="form-control" placeholder="Username:" required>
+          <!-- password -->
+          <label for="password" class="sr-only">Password:</label>
+          <input name="password" type="password" formControlName="password" class="form-control" placeholder="Password" required>
+          <label for="password2" class="sr-only">Confirm Password:</label>
+          <input name="password2" type="password" formControlName="password2" class="form-control" placeholder="Confirm Password" required>
+          <button onclick="submit" class="btn btn-outline-success" type="submit">Register</button>
+      </form>
+      <p class="login-link">Have an account? <a routerLink="/login">Login<i class="fas fa-external-link-alt"></i></a></p>
+      <div class="error">
+          <p>{{errorMessage}}</p>
+      </div>
+  </div>
+</div>

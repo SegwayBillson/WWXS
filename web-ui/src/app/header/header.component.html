@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">WWXS</a>
+    <button class="navbar-toggler" type="button" data-be-toggle="collapse" data-bs-target="#navbarToggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li *ngIf="auth.isAuth()" class="nav-item">
+          <a class="nav-link" routerLink="/buoys">Buoys</a>
+        </li>
+        <li *ngIf="auth.isAuth()" class="nav-item">
+          <a class="nav-link" routerLink="/data">Data</a>
+        </li>
+      </ul>
+      <button *ngIf="!auth.isAuth()" routerLink="/login" class="btn btn-primary">Log In</button>
+      <div *ngIf="auth.isAuth()" class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{auth.getUserData().username}}
+          <i class="fas fa-user"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" routerLink="/profile">Profile</a>
+          <a class="dropdown-item" routerLink="/group">Group</a>
+          <a class="dropdown-item" (click)="auth.logout()">Log out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

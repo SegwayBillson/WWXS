@@ -1,0 +1,5 @@
+<h3>{{user.username}}</h3>
+<h4>{{user.email}}</h4>
+<h4>Group:</h4>
+<h4 *ngIf="!user.group">You are not in a group.</h4>
+<h4 *ngIf="user.group">{{user.group.name}}</h4>

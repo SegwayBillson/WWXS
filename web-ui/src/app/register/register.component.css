@@ -1,0 +1,32 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.login-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.form-signin * {
+  margin: .5rem 0 .5rem 0;
+}
+input {
+  margin: 2rem 0 2rem 0;
+}
+.error {
+  color: red;
+}
+.login-link {
+  margin-top: 2rem;
+}
